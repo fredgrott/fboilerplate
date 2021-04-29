@@ -13,6 +13,7 @@ import 'package:fboilerplate/app/shared/log_pens.dart';
 import 'package:fboilerplate/app/shared/logger_types.dart';
 import 'package:flutter/material.dart';
 
+// ignore: long-method
 Future<void> main() async {
   // proper use of Futures is to try catch block the inner stuff so that
   // we properly catch as many exceptions as possible from the large
