@@ -82,16 +82,16 @@ prepdir:
 # https://pub.dev/packages/junitreport
 test:
   win64:
-    - flutter test --machine | tojunit -o reports\test\fproject_layout-test.xml
-    - junit2html reports\test\fproject_layout-test.xml reports\test\fproject_layout-test.html
+    - flutter test --machine | tojunit -o reports\test\fboilerplate-test.xml
+    - junit2html reports\test\fboilerplate-test.xml reports\test\fboilerplate-test.html
     - echo widget tests reports created
   mac64:
-    - flutter test --machine | tojunit -o reports/test/fproject_layout-test.xml
-    - junit2html reports/test/fproject_layout-test.xml reports/test/fproject_layout-test.html
+    - flutter test --machine | tojunit -o reports/test/fboilerplate-test.xml
+    - junit2html reports/test/fboilerplate-test.xml reports/test/fboilerplate-test.html
     - echo widget tests reports created
   linux64:
-    - flutter test --machine | tojunit -o reports/test/fproject_layout-test.xml
-    - junit2html reports/test/fproject_layout-test.xml reports/test/fproject_layout-test.html
+    - flutter test --machine | tojunit -o reports/test/fboilerplate-test.xml
+    - junit2html reports/test/fboilerplate-test.xml reports/test/fboilerplate-test.html
     - echo widget tests reports created
 
 # win64 flutter test --coverage --coverage-path reports\coverage
@@ -127,16 +127,16 @@ mycoverage:
 # https://pub.dev/packages/golden_toolkit
 mygoldens:
   win64:
-    - flutter test --update-goldens --machine | tojunit -o reports\test\fproject_layout-test.xml
-    - junit2html reports\test\fproject_layout-test.xml reports\test\fproject_layout-test.html
+    - flutter test --update-goldens --machine | tojunit -o reports\test\fboilerplate-test.xml
+    - junit2html reports\test\fboilerplate-test.xml reports\test\fboilerplate-test.html
     - echo goldens report generated
   mac64:
-    - flutter test --update-goldens --machine | tojunit -o reports/test/fproject_layout-test.xml
-    - junit2html reports/test/fproject_layout-test.xml reports/test/fproject_layout-test.html
+    - flutter test --update-goldens --machine | tojunit -o reports/test/fboilerplate-test.xml
+    - junit2html reports/test/fboilerplate-test.xml reports/test/fboilerplate-test.html
     - echo goldens report generated
   linux64:
-    - flutter test --update-goldens --machine | tojunit -o reports/test/fproject_layout-test.xml
-    - junit2html reports/test/fproject_layout-test.xml reports/test/fproject_layout-test.html
+    - flutter test --update-goldens --machine | tojunit -o reports/test/fboilerplate-test.xml
+    - junit2html reports/test/fboilerplate-test.xml reports/test/fboilerplate-test.html
     - echo goldens report generated
 
 # can be executed via
@@ -145,16 +145,16 @@ mygoldens:
 # https://pub.dev/packages/dcdg
 uml:
   win64:
-    - dcdg -o reports\uml\fproject_layout.puml
-    - java -jar %PLANTUML% reports\uml\fproject_layout.puml -config skinparams.iuml
+    - dcdg -o reports\uml\fboilerplate.puml
+    - java -jar %PLANTUML% reports\uml\fboilerplate.puml -config skinparams.iuml
     - echo uml png generated
   mac64:
-    - dcdg -o reports/uml/fproject_layout.puml
-    - java -jar $PLANTUML reports/uml/fproject_layout.puml -config skinparams.iuml
+    - dcdg -o reports/uml/fboilerplate.puml
+    - java -jar $PLANTUML reports/uml/fboilerplate.puml -config skinparams.iuml
     - echo uml png generated
   linux64:
-    - dcdg -o reports/uml/fproject_layout.puml
-    - java -jar $PLANTUML reports/uml/fproject_layout.puml -config skinparams.iuml
+    - dcdg -o reports/uml/fboilerplate.puml
+    - java -jar $PLANTUML reports/uml/fboilerplate.puml -config skinparams.iuml
     - echo uml png generated
 
 # can be executed via
