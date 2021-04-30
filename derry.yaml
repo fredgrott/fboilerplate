@@ -50,28 +50,6 @@
 # At this point assume that individual processes do their
 # own directory and file clean-up after every run and re-run.
 
-# run this at project creation via
-# derry prepdir platformName
-# no need to do separate win64, mac64, and linux64 commands
-# as dir creation is the same command on all platforms
-prepdir:
-  win64:
-      - mkdir reports\uml
-      - mkdir reports\coverage
-      - mkdir reports\test
-      - echo reports dir creation
-  mac64:
-      - mkdir reports/uml
-      - mkdir reports/coverage
-      - mkdir reports/test
-      - echo reports dir creation
-  linux64:
-      - mkdir reports/uml
-      - mkdir reports/coverage
-      - mkdir reports/test
-      - echo reports dir creation
-
-
 
 # can be executed via
 # derry test platformName
