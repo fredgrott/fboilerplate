@@ -4,6 +4,7 @@
 
 
 import 'package:fboilerplate/app/modules/my_app.dart';
+import 'package:fboilerplate/app/shared/app_globals.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -22,8 +23,8 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
     final app = MyAppPageObject();
-    expect(app.home.title, allOf(findsOneWidget, _HasText('FProject Layout')));
-    expect(app.home.message, allOf(findsOneWidget, _HasText('You have pushed the button this many times:')));
+    expect(app.home.title, allOf(findsOneWidget, _HasText(myAppTitle)));
+    expect(app.home.message, allOf(findsOneWidget, _HasText(myHomepageMessage)));
   });
 }
 

@@ -4,6 +4,7 @@
 
 
 import 'package:fboilerplate/app/modules/my_app.dart';
+import 'package:fboilerplate/app/shared/app_globals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -36,6 +37,6 @@ extension AppBarWhen on WidgetTestWhen<_WidgetTestHarness> {
 extension ExampleThen on WidgetTestThen<_WidgetTestHarness> {
   Future<void> appBarTitleIs() async {
     await tester.pump();
-    expect(find.text('FProject Layout'), findsOneWidget);
+    expect(find.text(myAppTitle), findsOneWidget);
   }
 }

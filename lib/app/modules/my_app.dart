@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:fboilerplate/app/screens/myhomepage/managers/my_home_page.dart';
+import 'package:fboilerplate/app/shared/app_globals.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FProject Layout',
+      title: myAppTitle,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'FProject Layout', message: "You have pushed the button this many times:",),
+      home: MyHomePage(title: myAppTitle, message: myHomepageMessage,),
     );
   }
 }
